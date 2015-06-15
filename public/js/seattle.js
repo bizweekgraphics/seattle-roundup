@@ -55,11 +55,14 @@ $j(document).ready(function(){
                     marginTop: - $window.height() + 'px'
                 });
 
+                // console.log("WAAAIT " + sectionNum);
+
             // if the section is greater than move the sections to margin 0 since they are not shown yet.
             } else if(i > sectionNum) {
                 $j(this).css({
                     marginTop: '0px'
                 });
+                // console.log("NOT YET " + sectionNum);
             }
         });
     }

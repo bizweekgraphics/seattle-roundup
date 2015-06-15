@@ -11,7 +11,7 @@
 }
 
 .lede-content , #main {
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -24,31 +24,31 @@ html, body {
 	width: 100%;
 	height: 100%;
 	top: 0;
+	z-index: -1;
 }
 
-#main {
-	z-index: -1;
+.slide {
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10% 10% 10% 55%;
+	margin: 0 auto;
+	background-size: 50% auto;
+	background-repeat: no-repeat;
+	overflow: hidden;
 
-	section {
-		// background: GoldenRod;
-		width: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		height: 100%;
-		box-sizing: border-box;
-		// width: 800px;
-		padding: 10%;
-		margin: 0 auto;
-		background-size: cover;
-		background-repeat: no-repeat;
-		overflow: hidden;
-	}
 
 	p {
-			
 		font-size: 1.25em;
-		// padding-top: 200px;
+		margin-bottom: 0.5em;
+	}
+
+	.location-details {
+		font-size: 1em;
+		font-family: $NHaas;
 	}
 
 	ul {
@@ -56,46 +56,81 @@ html, body {
 	}
 }
 
-#section1 {
+
+
+#slide1 {
 	background: #e1e1dd;
+
+	header {
+		text-align: center;
+	}
 
 	#main & {
 		padding-top: 25%;
+		padding-left: 10%;
 	}
 }
-#section2 {
-	// background: url('http://lorempixel.com/1440/1024/food/1');
-	background: #d2d2cb;
+#slide2 {
+	background-image: url('../img/octopus.jpg');
+	background-color: #d2d2cb;
+	background-position: center left;
+
 }
-#section3 {
-	background: #f9f9ee;
-	// background: url('http://lorempixel.com/1440/1024/food/2');	
+#slide3 {
+	background-color: #f9f9ee;
+	background-image: url('../img/clam.jpg');
+	background-position: center left;
 }
-#section4 {
-	background: #d4c9b8;
-	// background: url('http://lorempixel.com/1440/1024/food/3');
+#slide4 {
+	background-image: url('../img/pizza.jpg');
+	background-position: center center;
+	background-size: cover;
+
+	.slide-content {
+		background-color: rgba(0,0,0, 0.50);
+		padding: 10%;
+		color: $base-background-color;
+	}
 }
-#section5 {
-	background: #e1e1dd;
-	// background: url('http://lorempixel.com/1440/1024/food/4');
+#slide5 {
+	background-color: #e1e1dd;
+	background-image: url('../img/cocktail.jpg');
+	background-position: center left;
 }
-#section6 {
-	background: #d2d2cb;
-	// background: url('http://lorempixel.com/1440/1024/food/5');
+#slide6 {
+	background-color: #d2d2cb;
+	background-image: url('../img/canele.jpg');
+	background-position: center left;	
 }
-#section7 {
-	background: #f9f9ee;
-	// background: url('http://lorempixel.com/1440/1024/food/6');	
+#slide7 {
+	background-color: #f9f9ee;
+	background-image: url('../img/tuna_chips.jpg');
+	background-position: center left;
+	
 }
-#section8 {
-	background: #d4c9b8;
+#slide8 {
+	background-color: $base-background-color;
+	background: url('../img/footer.jpg') no-repeat center bottom;
+	background-size: contain;
 
 	#main & {
-		padding-top: 5%;
+		padding: 5% 5% 10%;
+	}
+
+	h2 {
+		font-family: $NHaas-medium;
+		padding: 2% 3%;
+		border: 2px solid $black;
+	}
+
+	.outline-text {
+		color: $base-background-color;
+		text-shadow: 0 1px 4px $black;
 	}
 
 	p {
 		font-size: 0.875em;
+		font-family: $NHaas;
 	}
 
 	li {
@@ -129,10 +164,6 @@ html, body {
 
 .hed {
 	color: $black;
-	// opacity: 0.8;
-	// position: absolute;
-	// z-index: 1000;
-	// top: -2.325em;
 }
 
 .subhed {

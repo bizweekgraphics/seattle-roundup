@@ -71,18 +71,21 @@
   src: url('fonts/AvenirNext-Regular.eot');
   src: url('fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
        url('fonts/AvenirNext-Regular.woff') format('woff');
+  font-weight: normal;
 }
 @font-face {
   font-family: 'AvenirNext-Demi';
   src: url('fonts/AvenirNext-Demi.eot');
   src: url('fonts/AvenirNext-Demi.eot?#iefix') format('embedded-opentype'),
        url('fonts/AvenirNext-Demi.woff') format('woff');
+  font-weight: normal;
 }
 @font-face {
   font-family: 'TiemposHeadlineWeb-Bold';
   src: url('fonts/TiemposHeadlineWeb-Bold.eot');
   src: url('fonts/TiemposHeadlineWeb-Bold.eot?#iefix') format('embedded-opentype'),
        url('fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
@@ -90,6 +93,7 @@
   src: url('fonts/TiemposTextWeb-Regular.eot');
   src: url('fonts/TiemposTextWeb-Regular.eot?#iefix') format('embedded-opentype'),
        url('fonts/TiemposTextWeb-Regular.woff') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
@@ -97,6 +101,7 @@
   src: url('fonts/TiemposTextWeb-RegularItalic.eot');
   src: url('fonts/TiemposTextWeb-RegularItalic.eot?#iefix') format('embedded-opentype'),
        url('fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
@@ -104,6 +109,7 @@
   src: url('http://cdn.gotraffic.net/business/public/fonts/TiemposTextWeb-Semibold.d5620036.eot') format('embedded-opentype'), 
        url('http://cdn.gotraffic.net/business/public/fonts/TiemposTextWeb-Semibold.308dba60.woff') format('woff'), 
        url('http://cdn.gotraffic.net/business/public/fonts/TiemposTextWeb-Semibold.4d2044a5.svg') format('svg');
+  font-weight: normal;
 }
 
 @font-face {
@@ -111,6 +117,7 @@
   src: url('fonts/NHaasGroteskDSPro-75Bd.eot');
   src: url('fonts/NHaasGroteskDSPro-75Bd.eot?#iefix') format('embedded-opentype'),
        url('fonts/NHaasGroteskDSPro-75Bd.woff') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
@@ -118,6 +125,7 @@
   src: url('fonts/NHaasGroteskDSPro-65Md.eot');
   src: url('fonts/NHaasGroteskDSPro-65Md.eot?#iefix') format('embedded-opentype'),
        url('fonts/NHaasGroteskDSPro-65Md.woff') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
@@ -125,6 +133,7 @@
   src: url('fonts/NHaasGroteskDSPro-55Rg.eot');
   src: url('fonts/NHaasGroteskDSPro-55Rg.eot?#iefix') format('embedded-opentype'),
        url('fonts/NHaasGroteskDSPro-55Rg.eot') format('woff');
+  font-weight: normal;
 }
 
 @font-face {
