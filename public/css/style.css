@@ -220,11 +220,6 @@ h1 {
   line-height: 1.1em;
 }
 
-/* line 28, ../scss/base/_typography.scss */
-h2 {
-  margin-top: 4em;
-}
-
 /* line 32, ../scss/base/_typography.scss */
 p {
   margin: 0 0 1.625em;
@@ -289,58 +284,86 @@ picture {
   top: 0;
   height: 100%;
   box-sizing: border-box;
-  padding: 10% 10%;
+  padding: 10%;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
-/* line 46, ../scss/_main.scss */
-#main section p {
-  font-size: 24px;
+/* line 48, ../scss/_main.scss */
+#main p {
+  font-size: 1.25em;
+}
+/* line 20, ../scss/bourbon/addons/_clearfix.scss */
+#main ul::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
-/* line 54, ../scss/_main.scss */
-.section1 {
+/* line 59, ../scss/_main.scss */
+#section1 {
   background: #e1e1dd;
+}
+/* line 62, ../scss/_main.scss */
+#main #section1 {
   padding-top: 25%;
 }
 
-/* line 58, ../scss/_main.scss */
-.section2 {
-  background: #d2d2cb;
-}
-
-/* line 62, ../scss/_main.scss */
-.section3 {
-  background: #f9f9ee;
-}
-
 /* line 66, ../scss/_main.scss */
-.section4 {
-  background: #d4c9b8;
+#section2 {
+  background: #d2d2cb;
 }
 
 /* line 70, ../scss/_main.scss */
-.section5 {
-  background: #e1e1dd;
-}
-
-/* line 74, ../scss/_main.scss */
-.section6 {
-  background: #d2d2cb;
-}
-
-/* line 78, ../scss/_main.scss */
-.section7 {
+#section3 {
   background: #f9f9ee;
 }
 
-/* line 82, ../scss/_main.scss */
-.section8 {
+/* line 74, ../scss/_main.scss */
+#section4 {
   background: #d4c9b8;
 }
 
-/* line 88, ../scss/_main.scss */
+/* line 78, ../scss/_main.scss */
+#section5 {
+  background: #e1e1dd;
+}
+
+/* line 82, ../scss/_main.scss */
+#section6 {
+  background: #d2d2cb;
+}
+
+/* line 86, ../scss/_main.scss */
+#section7 {
+  background: #f9f9ee;
+}
+
+/* line 90, ../scss/_main.scss */
+#section8 {
+  background: #d4c9b8;
+}
+/* line 93, ../scss/_main.scss */
+#main #section8 {
+  padding-top: 5%;
+}
+/* line 97, ../scss/_main.scss */
+#section8 p {
+  font-size: 0.875em;
+}
+/* line 101, ../scss/_main.scss */
+#section8 li {
+  float: left;
+  width: 17%;
+  padding-left: 3%;
+}
+/* line 106, ../scss/_main.scss */
+#section8 li:first-child {
+  padding-left: 0;
+}
+
+/* line 113, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -348,43 +371,43 @@ picture {
   left: 0px;
 }
 
-/* line 96, ../scss/_main.scss */
+/* line 121, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 100, ../scss/_main.scss */
+/* line 125, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 105, ../scss/_main.scss */
+/* line 130, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
 }
 
-/* line 113, ../scss/_main.scss */
+/* line 138, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 118, ../scss/_main.scss */
+/* line 143, ../scss/_main.scss */
 .byline {
   font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 124, ../scss/_main.scss */
+/* line 149, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
   font-size: 0.825em;
 }
 
-/* line 134, ../scss/_main.scss */
+/* line 159, ../scss/_main.scss */
 .block {
   width: 100%;
   height: 450px;

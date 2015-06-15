@@ -21,7 +21,9 @@ $j(document).ready(function(){
     $j(document).scrollTop(0);
 
     // scroll the page up with of the height of the page
-    $j(window).on('scroll', setSectionPositions);
+    setInterval(function() {
+        setSectionPositions();
+    }, 60);
     $j(window).on('resize', resize);
 
 
@@ -36,7 +38,7 @@ $j(document).ready(function(){
 
     function setSectionPositions() {
         //current scroll position
-        scrollPos = $j(document).scrollTop();
+        scrollPos = window.pageYOffset;//$j(document).scrollTop();
         //get current slide
         sectionNum = Math.floor(scrollPos / $window.height());
 

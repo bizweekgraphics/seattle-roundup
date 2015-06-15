@@ -38,51 +38,76 @@ html, body {
 		height: 100%;
 		box-sizing: border-box;
 		// width: 800px;
-		padding: 10% 10%;
+		padding: 10%;
 		margin: 0 auto;
 		background-size: cover;
 		background-repeat: no-repeat;
+		overflow: hidden;
+	}
 
-		p {
+	p {
 			
-			font-size: 24px;
-			// padding-top: 200px;
-		}
+		font-size: 1.25em;
+		// padding-top: 200px;
+	}
+
+	ul {
+		@include clearfix;
 	}
 }
 
-.section1 {
+#section1 {
 	background: #e1e1dd;
-	padding-top: 25%;
+
+	#main & {
+		padding-top: 25%;
+	}
 }
-.section2 {
+#section2 {
 	// background: url('http://lorempixel.com/1440/1024/food/1');
 	background: #d2d2cb;
 }
-.section3 {
+#section3 {
 	background: #f9f9ee;
 	// background: url('http://lorempixel.com/1440/1024/food/2');	
 }
-.section4 {
+#section4 {
 	background: #d4c9b8;
 	// background: url('http://lorempixel.com/1440/1024/food/3');
 }
-.section5 {
+#section5 {
 	background: #e1e1dd;
 	// background: url('http://lorempixel.com/1440/1024/food/4');
 }
-.section6 {
+#section6 {
 	background: #d2d2cb;
 	// background: url('http://lorempixel.com/1440/1024/food/5');
 }
-.section7 {
+#section7 {
 	background: #f9f9ee;
 	// background: url('http://lorempixel.com/1440/1024/food/6');	
 }
-.section8 {
+#section8 {
 	background: #d4c9b8;
 
-	
+	#main & {
+		padding-top: 5%;
+	}
+
+	p {
+		font-size: 0.875em;
+	}
+
+	li {
+		float: left;
+		width: 17%;
+		padding-left: 3%;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
 }
 
 .scroller {
