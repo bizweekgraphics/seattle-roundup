@@ -395,29 +395,31 @@ picture {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #3c3c3c;
+  margin-bottom: 2em;
 }
-/* line 140, ../scss/_main.scss */
+/* line 141, ../scss/_main.scss */
 #slide8 p {
   font-size: 0.875em;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
 }
-/* line 145, ../scss/_main.scss */
+/* line 146, ../scss/_main.scss */
 #slide8 li {
   float: left;
   width: 17%;
   padding-left: 3%;
 }
-/* line 150, ../scss/_main.scss */
+/* line 151, ../scss/_main.scss */
 #slide8 li:first-child {
   padding-left: 0;
 }
 
-/* line 157, ../scss/_main.scss */
+/* line 158, ../scss/_main.scss */
 .pullout-box {
   margin-bottom: 4em;
+  font-size: 1.5em;
 }
 
-/* line 161, ../scss/_main.scss */
+/* line 163, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -425,65 +427,89 @@ picture {
   left: 0px;
 }
 
-/* line 169, ../scss/_main.scss */
+/* line 171, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 173, ../scss/_main.scss */
+/* line 175, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 178, ../scss/_main.scss */
+/* line 180, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
 }
 
-/* line 182, ../scss/_main.scss */
+/* line 184, ../scss/_main.scss */
+.dek {
+  color: #3c3c3c;
+  font-size: 2em;
+}
+
+/* line 189, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 187, ../scss/_main.scss */
+/* line 194, ../scss/_main.scss */
 .byline {
-  font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+  font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 193, ../scss/_main.scss */
+/* line 200, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
-  font-size: 0.825em;
 }
 
-/* line 199, ../scss/_main.scss */
+/* line 206, ../scss/_main.scss */
 .short-line {
   width: 70px;
   border-bottom: 2px solid #3c3c3c;
   margin: 0 auto 2em;
+  font-size: 1.5em;
 }
 
-/* line 206, ../scss/_main.scss */
+/* line 214, ../scss/_main.scss */
 .seal, .octopus, .crab {
   width: 40%;
   text-align: right;
   display: inline-block;
-  margin-bottom: 1em;
+  margin-bottom: -2em;
+  margin-bottom: -2em;
+  margin-left: 16em;
 }
 
-/* line 213, ../scss/_main.scss */
+/* line 223, ../scss/_main.scss */
 .octopus {
-  width: 20%;
+  width: 16%;
 }
 
 /*-- MEDIA QUERIES -- */
 /* MOBILE */
 /* TABLET */
+@media screen and (max-width: 1024px) {
+  /* line 3, ../scss/mediaqueries/_tablet.scss */
+  #slide8 li {
+    width: 30%;
+    padding-left: 5%;
+  }
+  /* line 7, ../scss/mediaqueries/_tablet.scss */
+  #slide8 li:nth-of-type(3n) {
+    clear: right;
+    margin-bottom: 2em;
+  }
+  /* line 12, ../scss/mediaqueries/_tablet.scss */
+  #slide8 li:nth-of-type(3n + 1) {
+    padding-left: 0;
+  }
+}
 /* DESKTOP */
 /* RETINA */
 /* Print Styles
