@@ -54,6 +54,11 @@ html, body {
 	ul {
 		@include clearfix;
 	}
+
+	.outline-text {
+		color: $base-background-color;
+		text-shadow: 0 1px 4px $black;
+	}
 }
 
 
@@ -85,6 +90,12 @@ html, body {
 	background-image: url('../img/pizza.jpg');
 	background-position: center center;
 	background-size: cover;
+
+	h3 {
+		font-family: $NHaas-medium;
+		padding: 2% 3%;
+		border: 2px solid $base-background-color;
+	}
 
 	.slide-content {
 		background-color: rgba(0,0,0, 0.50);
@@ -121,11 +132,6 @@ html, body {
 		font-family: $NHaas-medium;
 		padding: 2% 3%;
 		border: 2px solid $black;
-	}
-
-	.outline-text {
-		color: $base-background-color;
-		text-shadow: 0 1px 4px $black;
 	}
 
 	p {
