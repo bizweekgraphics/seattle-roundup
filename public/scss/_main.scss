@@ -146,8 +146,8 @@ html, body {
 	}
 
 	p {
-		font-size: 0.875em;
-		font-family: $NHaas;
+		font-size: 0.9em;
+		// font-family: $NHaas;
 	}
 
 	li {
@@ -207,6 +207,7 @@ html, body {
 .dateline {
 	font-family: $NHaas;
 	padding-left: 0.5em;
+	border-left: 1px solid $black;
 	// font-size: 0.825em;
 }
 
