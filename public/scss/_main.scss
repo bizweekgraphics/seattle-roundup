@@ -56,8 +56,15 @@ html, body {
 	}
 
 	.outline-text {
-		color: $base-background-color;
-		text-shadow: 0 1px 4px $black;
+		color: transparent;
+		background-color: $black;
+
+		@include prefixer(text-fill-color, $base-background-color, webkit moz ms o);
+		@include prefixer(text-stroke, 0.125em transparent, webkit moz ms o);
+		@include prefixer(background-clip, text, webkit moz ms o);
+		padding-left: 0.09em;
+		letter-spacing: 0.12em;
+		// text-shadow: 0 1px 4px $black;
 	}
 }
 
@@ -70,10 +77,10 @@ html, body {
 		text-align: center;
 	}
 
-	#main & {
+	// #main & {
 		padding-top: 25%;
 		padding-left: 10%;
-	}
+	// }
 }
 #slide2 {
 	background-image: url('../img/octopus.jpg');

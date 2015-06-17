@@ -305,52 +305,63 @@ picture {
 }
 /* line 58, ../scss/_main.scss */
 .slide .outline-text {
-  color: #fff;
-  text-shadow: 0 1px 4px #3c3c3c;
+  color: transparent;
+  background-color: #3c3c3c;
+  -webkit-text-fill-color: #fff;
+  -moz-text-fill-color: #fff;
+  -ms-text-fill-color: #fff;
+  -o-text-fill-color: #fff;
+  -webkit-text-stroke: 0.125em transparent;
+  -moz-text-stroke: 0.125em transparent;
+  -ms-text-stroke: 0.125em transparent;
+  -o-text-stroke: 0.125em transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  padding-left: 0.09em;
+  letter-spacing: 0.12em;
 }
 
-/* line 66, ../scss/_main.scss */
+/* line 73, ../scss/_main.scss */
 #slide1 {
   background: #e1e1dd;
-}
-/* line 69, ../scss/_main.scss */
-#slide1 header {
-  text-align: center;
-}
-/* line 73, ../scss/_main.scss */
-#main #slide1 {
   padding-top: 25%;
   padding-left: 10%;
 }
+/* line 76, ../scss/_main.scss */
+#slide1 header {
+  text-align: center;
+}
 
-/* line 78, ../scss/_main.scss */
+/* line 85, ../scss/_main.scss */
 #slide2 {
   background-image: url("../img/octopus.jpg");
   background-color: #d2d2cb;
   background-position: center left;
 }
 
-/* line 84, ../scss/_main.scss */
+/* line 91, ../scss/_main.scss */
 #slide3 {
   background-color: #f9f9ee;
   background-image: url("../img/clam.jpg");
   background-position: center left;
 }
 
-/* line 89, ../scss/_main.scss */
+/* line 96, ../scss/_main.scss */
 #slide4 {
   background-image: url("../img/pizza.jpg");
   background-position: center center;
   background-size: cover;
   padding-left: 10%;
 }
-/* line 95, ../scss/_main.scss */
+/* line 102, ../scss/_main.scss */
 #slide4 h3 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #fff;
 }
-/* line 101, ../scss/_main.scss */
+/* line 108, ../scss/_main.scss */
 #slide4 .slide-content {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10%;
@@ -359,67 +370,67 @@ picture {
   height: 100%;
 }
 
-/* line 109, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 #slide5 {
   background-color: #e1e1dd;
   background-image: url("../img/cocktail.jpg");
   background-position: center left;
 }
 
-/* line 114, ../scss/_main.scss */
+/* line 121, ../scss/_main.scss */
 #slide6 {
   background-color: #d2d2cb;
   background-image: url("../img/canele.jpg");
   background-position: center left;
 }
 
-/* line 119, ../scss/_main.scss */
+/* line 126, ../scss/_main.scss */
 #slide7 {
   background-color: #f9f9ee;
   background-image: url("../img/tuna_chips.jpg");
   background-position: center left;
 }
 
-/* line 125, ../scss/_main.scss */
+/* line 132, ../scss/_main.scss */
 #slide8 {
   background-color: #fff;
   background: url("../img/footer.jpg") no-repeat center bottom;
   background-size: contain;
 }
-/* line 130, ../scss/_main.scss */
+/* line 137, ../scss/_main.scss */
 #main #slide8 {
   padding: 5% 5% 10%;
 }
-/* line 134, ../scss/_main.scss */
+/* line 141, ../scss/_main.scss */
 #slide8 h2 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #3c3c3c;
   margin-bottom: 2em;
 }
-/* line 141, ../scss/_main.scss */
+/* line 148, ../scss/_main.scss */
 #slide8 p {
   font-size: 0.875em;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
 }
-/* line 146, ../scss/_main.scss */
+/* line 153, ../scss/_main.scss */
 #slide8 li {
   float: left;
   width: 17%;
   padding-left: 3%;
 }
-/* line 151, ../scss/_main.scss */
+/* line 158, ../scss/_main.scss */
 #slide8 li:first-child {
   padding-left: 0;
 }
 
-/* line 158, ../scss/_main.scss */
+/* line 165, ../scss/_main.scss */
 .pullout-box {
   margin-bottom: 4em;
   font-size: 1.5em;
 }
 
-/* line 163, ../scss/_main.scss */
+/* line 170, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -427,48 +438,48 @@ picture {
   left: 0px;
 }
 
-/* line 171, ../scss/_main.scss */
+/* line 178, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 175, ../scss/_main.scss */
+/* line 182, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 180, ../scss/_main.scss */
+/* line 187, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
 }
 
-/* line 184, ../scss/_main.scss */
+/* line 191, ../scss/_main.scss */
 .dek {
   color: #3c3c3c;
   font-size: 2em;
 }
 
-/* line 189, ../scss/_main.scss */
+/* line 196, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 194, ../scss/_main.scss */
+/* line 201, ../scss/_main.scss */
 .byline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 200, ../scss/_main.scss */
+/* line 207, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
 }
 
-/* line 206, ../scss/_main.scss */
+/* line 213, ../scss/_main.scss */
 .short-line {
   width: 70px;
   border-bottom: 2px solid #3c3c3c;
@@ -476,7 +487,7 @@ picture {
   font-size: 1.5em;
 }
 
-/* line 214, ../scss/_main.scss */
+/* line 221, ../scss/_main.scss */
 .seal, .octopus, .crab {
   width: 40%;
   text-align: right;
@@ -486,7 +497,7 @@ picture {
   margin-left: 16em;
 }
 
-/* line 223, ../scss/_main.scss */
+/* line 230, ../scss/_main.scss */
 .octopus {
   width: 16%;
 }
@@ -496,18 +507,65 @@ picture {
 /* TABLET */
 @media screen and (max-width: 1024px) {
   /* line 3, ../scss/mediaqueries/_tablet.scss */
+  .hed {
+    font-size: 3.25em;
+    margin-bottom: 0.5em;
+  }
+
+  /* line 8, ../scss/mediaqueries/_tablet.scss */
+  .dek {
+    font-size: 1.25em;
+  }
+
+  /* line 12, ../scss/mediaqueries/_tablet.scss */
+  .short-line {
+    margin-bottom: 0.75em;
+  }
+
+  /* line 16, ../scss/mediaqueries/_tablet.scss */
+  .lede-content {
+    width: 80%;
+  }
+
+  /* line 20, ../scss/mediaqueries/_tablet.scss */
+  .slide {
+    padding: 10% 5% 5% 54%;
+  }
+
+  /* line 25, ../scss/mediaqueries/_tablet.scss */
+  #slide1 {
+    padding-top: 24%;
+    padding-left: 5%;
+  }
+
+  /* line 30, ../scss/mediaqueries/_tablet.scss */
+  #slide4 {
+    padding: 5%;
+  }
+  /* line 33, ../scss/mediaqueries/_tablet.scss */
+  #slide4 .slide-content {
+    padding: 5% 4%;
+  }
+
+  /* line 38, ../scss/mediaqueries/_tablet.scss */
   #slide8 li {
     width: 30%;
     padding-left: 5%;
   }
-  /* line 7, ../scss/mediaqueries/_tablet.scss */
+  /* line 42, ../scss/mediaqueries/_tablet.scss */
   #slide8 li:nth-of-type(3n) {
     clear: right;
     margin-bottom: 2em;
   }
-  /* line 12, ../scss/mediaqueries/_tablet.scss */
+  /* line 47, ../scss/mediaqueries/_tablet.scss */
   #slide8 li:nth-of-type(3n + 1) {
     padding-left: 0;
+  }
+
+  /* line 52, ../scss/mediaqueries/_tablet.scss */
+  .pullout-box {
+    margin-bottom: 1.75em;
+    font-size: 1.1em;
   }
 }
 /* DESKTOP */

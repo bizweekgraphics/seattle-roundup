@@ -1,5 +1,40 @@
 /* TABLET */
 @media screen and (max-width: 1024px) {
+	.hed {
+		font-size: 3.25em;
+		margin-bottom: 0.5em;
+	}
+
+	.dek {
+	  font-size: 1.25em;
+	}
+
+	.short-line {
+		margin-bottom: 0.75em;
+	}
+
+	.lede-content {
+		width: 80%;
+	}
+
+	.slide {
+		padding: 10% 5% 5% 54%;
+	}
+
+	// #main
+	 #slide1 {
+	  padding-top: 24%;
+	  padding-left: 5%;
+	}
+
+	#slide4 {
+		padding: 5%;
+		
+		.slide-content {
+			padding: 5% 4%;
+		}
+	}
+
 	#slide8 li {
 		width: 30%;
 		padding-left: 5%;
@@ -12,5 +47,10 @@
 		&:nth-of-type(3n + 1) {
 			padding-left: 0;
 		}
-	}  
+	}
+
+	.pullout-box {
+		margin-bottom: 1.75em;
+		font-size: 1.1em;
+	}
 }
