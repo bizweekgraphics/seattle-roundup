@@ -41,19 +41,19 @@ html, body {
 	overflow: hidden;
 	opacity: 0;
 
-	@include animation(showMe 1.0s ease-in, slide 2.0s ease);
+	// @include animation(showMe 1.0s ease-in, slide 2.0s ease);
 	
 
-	@include transform(translateZ(0));
-	@include backface-visibility(hidden);
+	// @include transform(translateZ(0));
+	// @include backface-visibility(hidden);
 
-	@include keyframes(showMe) {
-	  from {
-	    opacity: 1;
-	  } to {
-	    opacity: 0;
-	  }
-	}
+	// @include keyframes(showMe) {
+	//   from {
+	//     opacity: 1;
+	//   } to {
+	//     opacity: 0;
+	//   }
+	// }
 
 	p {
 		font-size: 1.25em;

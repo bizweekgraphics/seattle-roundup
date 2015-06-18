@@ -286,40 +286,6 @@ picture {
   background-repeat: no-repeat;
   overflow: hidden;
   opacity: 0;
-  -webkit-animation: showMe 1s ease-in, slide 2s ease;
-  -moz-animation: showMe 1s ease-in, slide 2s ease;
-  animation: showMe 1s ease-in, slide 2s ease;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-@-webkit-keyframes showMe {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-moz-keyframes showMe {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes showMe {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 /* line 58, ../scss/_main.scss */
 .slide p {
