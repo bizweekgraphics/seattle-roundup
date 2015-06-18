@@ -11,7 +11,7 @@
 }
 
 .lede-content , #main {
-	width: 70%;
+	// width: 70%;
 	margin: 0 auto;
 }
 
@@ -21,8 +21,8 @@ html, body {
 
 #main {
 	position: fixed;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	top: 0;
 	z-index: -1;
 }
@@ -39,7 +39,21 @@ html, body {
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	opacity: 0;
 
+	@include animation(showMe 1.0s ease-in, slide 2.0s ease);
+	
+
+	@include transform(translateZ(0));
+	@include backface-visibility(hidden);
+
+	@include keyframes(showMe) {
+	  from {
+	    opacity: 1;
+	  } to {
+	    opacity: 0;
+	  }
+	}
 
 	p {
 		font-size: 1.25em;
@@ -71,16 +85,12 @@ html, body {
 
 
 #slide1 {
-	background: #e1e1dd;
+	background: #fefefe;
+	padding: 12% 5% 5%;
 
 	header {
 		text-align: center;
 	}
-
-	// #main & {
-		padding-top: 25%;
-		padding-left: 10%;
-	// }
 }
 #slide2 {
 	background-image: url('../img/octopus.jpg');
@@ -97,20 +107,26 @@ html, body {
 	background-image: url('../img/pizza.jpg');
 	background-position: center center;
 	background-size: cover;
-	padding-left: 10%;
+	padding: 5%;
 
 	h3 {
 		font-family: $NHaas-medium;
-		padding: 2% 3%;
-		border: 2px solid $base-background-color;
+		// padding: 2% 3%;
+		// border: 2px solid $base-background-color;
+
+		padding: 5% 0% 5% 7%;
+		border: 4px solid $base-background-color;
+
 	}
 
 	.slide-content {
 		background-color: rgba(0,0,0, 0.50);
-		padding: 10%;
+		padding: 5%;
 		color: $base-background-color;
 		box-sizing: border-box;
 		height: 100%;
+
+  	display: table;
 	}
 }
 #slide5 {
@@ -163,8 +179,18 @@ html, body {
 }
 
 .pullout-box {
-	margin-bottom: 4em;
-	font-size: 1.5em;
+	// margin-bottom: 4em;
+	// font-size: 1.5em;
+	@extend .wrap-subcontent;
+	font-size: 1.25em;
+	width: 40%;
+	padding-right: 2em;
+}
+
+
+.wrap-subcontent {
+	display: table-cell;
+	vertical-align: bottom;
 }
 
 .scroller {
@@ -224,8 +250,7 @@ html, body {
 	text-align: right;
 	display: inline-block;
 	margin-bottom: -2em;
-	margin-bottom: -2em;
-	margin-left: 16em;
+	margin-left: 17em;
 }
 
 .octopus {

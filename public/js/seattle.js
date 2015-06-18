@@ -23,6 +23,8 @@ $j(document).ready(function(){
     // scroll the page up with of the height of the page
     setInterval(function() {
         setSectionPositions();
+
+        console.log("Im currently on " + sectionNum);
     }, 60);
     $j(window).on('resize', resize);
 
@@ -44,7 +46,8 @@ $j(document).ready(function(){
 
         //get the offset
         $sections.eq(sectionNum).css({
-            marginTop: (-1 * (scrollPos - $window.height() * sectionNum)) + 'px'
+            marginTop: (-1 * (scrollPos - $window.height() * sectionNum)) + 'px',
+            opacity: 1
         });
 
         //force non-current sections to hide
@@ -52,7 +55,8 @@ $j(document).ready(function(){
             // if the section is smaller than move the sections off the window screen
             if(i < sectionNum) {
                 $j(this).css({
-                    marginTop: - $window.height() + 'px'
+                    marginTop: - $window.height() + 'px',
+                    opacity: 0
                 });
 
                 // console.log("WAAAIT " + sectionNum);
@@ -60,10 +64,14 @@ $j(document).ready(function(){
             // if the section is greater than move the sections to margin 0 since they are not shown yet.
             } else if(i > sectionNum) {
                 $j(this).css({
-                    marginTop: '0px'
+                    marginTop: '0px',
+                    opacity: 0
                 });
                 // console.log("NOT YET " + sectionNum);
             }
         });
     }
+
+
+
 });

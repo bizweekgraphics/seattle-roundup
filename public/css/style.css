@@ -216,7 +216,7 @@ h6 {
 
 /* line 23, ../scss/base/_typography.scss */
 h1 {
-  font-size: 4em;
+  font-size: 4rem;
   line-height: 1.1em;
 }
 
@@ -260,15 +260,14 @@ picture {
 /* page style */
 /* line 13, ../scss/_main.scss */
 .lede-content, #main {
-  width: 70%;
   margin: 0 auto;
 }
 
 /* line 22, ../scss/_main.scss */
 #main {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   z-index: -1;
 }
@@ -286,13 +285,48 @@ picture {
   background-size: auto 100%;
   background-repeat: no-repeat;
   overflow: hidden;
+  opacity: 0;
+  -webkit-animation: showMe 1s ease-in, slide 2s ease;
+  -moz-animation: showMe 1s ease-in, slide 2s ease;
+  animation: showMe 1s ease-in, slide 2s ease;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-/* line 44, ../scss/_main.scss */
+@-webkit-keyframes showMe {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes showMe {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes showMe {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* line 58, ../scss/_main.scss */
 .slide p {
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
-/* line 49, ../scss/_main.scss */
+/* line 63, ../scss/_main.scss */
 .slide .location-details {
   font-size: 1em;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
@@ -303,7 +337,7 @@ picture {
   content: "";
   display: table;
 }
-/* line 58, ../scss/_main.scss */
+/* line 72, ../scss/_main.scss */
 .slide .outline-text {
   color: transparent;
   background-color: #3c3c3c;
@@ -323,113 +357,120 @@ picture {
   letter-spacing: 0.12em;
 }
 
-/* line 73, ../scss/_main.scss */
+/* line 87, ../scss/_main.scss */
 #slide1 {
-  background: #e1e1dd;
-  padding-top: 25%;
-  padding-left: 10%;
+  background: #fefefe;
+  padding: 12% 5% 5%;
 }
-/* line 76, ../scss/_main.scss */
+/* line 91, ../scss/_main.scss */
 #slide1 header {
   text-align: center;
 }
 
-/* line 85, ../scss/_main.scss */
+/* line 95, ../scss/_main.scss */
 #slide2 {
   background-image: url("../img/octopus.jpg");
   background-color: #d2d2cb;
   background-position: center left;
 }
 
-/* line 91, ../scss/_main.scss */
+/* line 101, ../scss/_main.scss */
 #slide3 {
   background-color: #f9f9ee;
   background-image: url("../img/clam.jpg");
   background-position: center left;
 }
 
-/* line 96, ../scss/_main.scss */
+/* line 106, ../scss/_main.scss */
 #slide4 {
   background-image: url("../img/pizza.jpg");
   background-position: center center;
   background-size: cover;
-  padding-left: 10%;
+  padding: 5%;
 }
-/* line 102, ../scss/_main.scss */
+/* line 112, ../scss/_main.scss */
 #slide4 h3 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
-  padding: 2% 3%;
-  border: 2px solid #fff;
+  padding: 5% 0% 5% 7%;
+  border: 4px solid #fff;
 }
-/* line 108, ../scss/_main.scss */
+/* line 122, ../scss/_main.scss */
 #slide4 .slide-content {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10%;
+  padding: 5%;
   color: #fff;
   box-sizing: border-box;
   height: 100%;
+  display: table;
 }
 
-/* line 116, ../scss/_main.scss */
+/* line 132, ../scss/_main.scss */
 #slide5 {
   background-color: #e1e1dd;
   background-image: url("../img/cocktail.jpg");
   background-position: center left;
 }
 
-/* line 121, ../scss/_main.scss */
+/* line 137, ../scss/_main.scss */
 #slide6 {
   background-color: #d2d2cb;
   background-image: url("../img/canele.jpg");
   background-position: center left;
 }
 
-/* line 126, ../scss/_main.scss */
+/* line 142, ../scss/_main.scss */
 #slide7 {
   background-color: #f9f9ee;
   background-image: url("../img/tuna_chips.jpg");
   background-position: center left;
 }
 
-/* line 132, ../scss/_main.scss */
+/* line 148, ../scss/_main.scss */
 #slide8 {
   background-color: #fff;
   background: url("../img/footer.jpg") no-repeat center bottom;
   background-size: contain;
 }
-/* line 137, ../scss/_main.scss */
+/* line 153, ../scss/_main.scss */
 #main #slide8 {
   padding: 5% 5% 10%;
 }
-/* line 141, ../scss/_main.scss */
+/* line 157, ../scss/_main.scss */
 #slide8 h2 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #3c3c3c;
   margin-bottom: 2em;
 }
-/* line 148, ../scss/_main.scss */
+/* line 164, ../scss/_main.scss */
 #slide8 p {
   font-size: 0.9em;
 }
-/* line 153, ../scss/_main.scss */
+/* line 169, ../scss/_main.scss */
 #slide8 li {
   float: left;
   width: 17%;
   padding-left: 3%;
 }
-/* line 158, ../scss/_main.scss */
+/* line 174, ../scss/_main.scss */
 #slide8 li:first-child {
   padding-left: 0;
 }
 
-/* line 165, ../scss/_main.scss */
+/* line 181, ../scss/_main.scss */
 .pullout-box {
-  margin-bottom: 4em;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  width: 40%;
+  padding-right: 2em;
 }
 
-/* line 170, ../scss/_main.scss */
+/* line 191, ../scss/_main.scss */
+.wrap-subcontent, .pullout-box {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+/* line 196, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -437,49 +478,49 @@ picture {
   left: 0px;
 }
 
-/* line 178, ../scss/_main.scss */
+/* line 204, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 182, ../scss/_main.scss */
+/* line 208, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 187, ../scss/_main.scss */
+/* line 213, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
 }
 
-/* line 191, ../scss/_main.scss */
+/* line 217, ../scss/_main.scss */
 .dek {
   color: #3c3c3c;
   font-size: 2em;
 }
 
-/* line 196, ../scss/_main.scss */
+/* line 222, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 201, ../scss/_main.scss */
+/* line 227, ../scss/_main.scss */
 .byline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 207, ../scss/_main.scss */
+/* line 233, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
   border-left: 1px solid #3c3c3c;
 }
 
-/* line 214, ../scss/_main.scss */
+/* line 240, ../scss/_main.scss */
 .short-line {
   width: 70px;
   border-bottom: 2px solid #3c3c3c;
@@ -487,17 +528,16 @@ picture {
   font-size: 1.5em;
 }
 
-/* line 222, ../scss/_main.scss */
+/* line 248, ../scss/_main.scss */
 .seal, .octopus, .crab {
   width: 40%;
   text-align: right;
   display: inline-block;
   margin-bottom: -2em;
-  margin-bottom: -2em;
-  margin-left: 16em;
+  margin-left: 17em;
 }
 
-/* line 231, ../scss/_main.scss */
+/* line 256, ../scss/_main.scss */
 .octopus {
   width: 16%;
 }
