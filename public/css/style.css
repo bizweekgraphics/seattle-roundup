@@ -258,12 +258,25 @@ picture {
 }
 
 /* page style */
-/* line 13, ../scss/_main.scss */
+/* line 3, ../scss/_main.scss */
+#slide3 h2::after, #slide4 h2::after, #slide5 h2::after {
+  content: "";
+  position: absolute;
+  top: -0.1em;
+  right: 1em;
+  width: 8rem;
+  height: 8rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* line 30, ../scss/_main.scss */
 .lede-content, #main {
+  width: 70%;
   margin: 0 auto;
 }
 
-/* line 22, ../scss/_main.scss */
+/* line 39, ../scss/_main.scss */
 #main {
   position: fixed;
   width: 100vw;
@@ -272,13 +285,13 @@ picture {
   z-index: -1;
 }
 
-/* line 30, ../scss/_main.scss */
+/* line 47, ../scss/_main.scss */
 .slide {
-  width: 100%;
+  width: 100vw;
   display: block;
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
   padding: 10% 10% 10% 55%;
   margin: 0 auto;
@@ -287,12 +300,16 @@ picture {
   overflow: hidden;
   opacity: 0;
 }
-/* line 58, ../scss/_main.scss */
+/* line 75, ../scss/_main.scss */
+.slide h2 {
+  position: relative;
+}
+/* line 79, ../scss/_main.scss */
 .slide p {
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
-/* line 63, ../scss/_main.scss */
+/* line 84, ../scss/_main.scss */
 .slide .location-details {
   font-size: 1em;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
@@ -303,7 +320,7 @@ picture {
   content: "";
   display: table;
 }
-/* line 72, ../scss/_main.scss */
+/* line 93, ../scss/_main.scss */
 .slide .outline-text {
   color: transparent;
   background-color: #3c3c3c;
@@ -323,44 +340,52 @@ picture {
   letter-spacing: 0.12em;
 }
 
-/* line 87, ../scss/_main.scss */
+/* line 108, ../scss/_main.scss */
 #slide1 {
   background: #fefefe;
   padding: 12% 5% 5%;
 }
-/* line 91, ../scss/_main.scss */
+/* line 112, ../scss/_main.scss */
 #slide1 header {
   text-align: center;
 }
 
-/* line 95, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 #slide2 {
   background-image: url("../img/octopus.jpg");
   background-color: #d2d2cb;
   background-position: center left;
 }
 
-/* line 101, ../scss/_main.scss */
+/* line 121, ../scss/_main.scss */
 #slide3 {
   background-color: #f9f9ee;
   background-image: url("../img/clam.jpg");
   background-position: center left;
 }
+/* line 128, ../scss/_main.scss */
+#slide3 h2::after {
+  background-image: url("../img/seal.png");
+}
 
-/* line 106, ../scss/_main.scss */
+/* line 134, ../scss/_main.scss */
 #slide4 {
   background-image: url("../img/pizza.jpg");
   background-position: center center;
   background-size: cover;
   padding: 5%;
 }
-/* line 112, ../scss/_main.scss */
+/* line 142, ../scss/_main.scss */
+#slide4 h2::after {
+  background-image: url("../img/octopus.png");
+}
+/* line 148, ../scss/_main.scss */
 #slide4 h3 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 5% 0% 5% 7%;
   border: 4px solid #fff;
 }
-/* line 122, ../scss/_main.scss */
+/* line 158, ../scss/_main.scss */
 #slide4 .slide-content {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5%;
@@ -370,73 +395,77 @@ picture {
   display: table;
 }
 
-/* line 132, ../scss/_main.scss */
+/* line 168, ../scss/_main.scss */
 #slide5 {
   background-color: #e1e1dd;
   background-image: url("../img/cocktail.jpg");
   background-position: center left;
 }
+/* line 175, ../scss/_main.scss */
+#slide5 h2::after {
+  background-image: url("../img/crab.png");
+}
 
-/* line 137, ../scss/_main.scss */
+/* line 182, ../scss/_main.scss */
 #slide6 {
   background-color: #d2d2cb;
   background-image: url("../img/canele.jpg");
   background-position: center left;
 }
 
-/* line 142, ../scss/_main.scss */
+/* line 187, ../scss/_main.scss */
 #slide7 {
   background-color: #f9f9ee;
   background-image: url("../img/tuna_chips.jpg");
   background-position: center left;
 }
 
-/* line 148, ../scss/_main.scss */
+/* line 193, ../scss/_main.scss */
 #slide8 {
   background-color: #fff;
   background: url("../img/footer.jpg") no-repeat center bottom;
   background-size: contain;
 }
-/* line 153, ../scss/_main.scss */
+/* line 198, ../scss/_main.scss */
 #main #slide8 {
   padding: 5% 5% 10%;
 }
-/* line 157, ../scss/_main.scss */
+/* line 202, ../scss/_main.scss */
 #slide8 h2 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #3c3c3c;
   margin-bottom: 2em;
 }
-/* line 164, ../scss/_main.scss */
+/* line 209, ../scss/_main.scss */
 #slide8 p {
   font-size: 0.9em;
 }
-/* line 169, ../scss/_main.scss */
+/* line 214, ../scss/_main.scss */
 #slide8 li {
   float: left;
   width: 17%;
   padding-left: 3%;
 }
-/* line 174, ../scss/_main.scss */
+/* line 219, ../scss/_main.scss */
 #slide8 li:first-child {
   padding-left: 0;
 }
 
-/* line 181, ../scss/_main.scss */
+/* line 226, ../scss/_main.scss */
 .pullout-box {
   font-size: 1.25em;
   width: 40%;
   padding-right: 2em;
 }
 
-/* line 191, ../scss/_main.scss */
+/* line 236, ../scss/_main.scss */
 .wrap-subcontent, .pullout-box {
   display: table-cell;
   vertical-align: bottom;
 }
 
-/* line 196, ../scss/_main.scss */
+/* line 241, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -444,49 +473,49 @@ picture {
   left: 0px;
 }
 
-/* line 204, ../scss/_main.scss */
+/* line 249, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 208, ../scss/_main.scss */
+/* line 253, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 213, ../scss/_main.scss */
+/* line 258, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
 }
 
-/* line 217, ../scss/_main.scss */
+/* line 262, ../scss/_main.scss */
 .dek {
   color: #3c3c3c;
   font-size: 2em;
 }
 
-/* line 222, ../scss/_main.scss */
+/* line 267, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 227, ../scss/_main.scss */
+/* line 272, ../scss/_main.scss */
 .byline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 233, ../scss/_main.scss */
+/* line 278, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
   border-left: 1px solid #3c3c3c;
 }
 
-/* line 240, ../scss/_main.scss */
+/* line 285, ../scss/_main.scss */
 .short-line {
   width: 70px;
   border-bottom: 2px solid #3c3c3c;
@@ -494,87 +523,103 @@ picture {
   font-size: 1.5em;
 }
 
-/* line 248, ../scss/_main.scss */
-.seal, .octopus, .crab {
-  width: 40%;
-  text-align: right;
-  display: inline-block;
-  margin-bottom: -2em;
-  margin-left: 17em;
-}
-
-/* line 256, ../scss/_main.scss */
-.octopus {
-  width: 16%;
-}
-
 /*-- MEDIA QUERIES -- */
 /* MOBILE */
-@media screen and (max-width: 29.9999em) {
-  /* line 4, ../scss/mediaqueries/_mobile.scss */
+@media screen and (max-width: 560px) {
+  /* line 3, ../scss/mediaqueries/_mobile.scss */
+  .lede-content, #main {
+    width: 100%;
+  }
+
+  /* line 8, ../scss/mediaqueries/_mobile.scss */
   #main .slide {
     padding: 5%;
+    position: relative;
+    min-height: 100vh;
+    opacity: 1;
+    top: initial;
+    overflow: visible;
   }
-  /* line 8, ../scss/mediaqueries/_mobile.scss */
+  /* line 17, ../scss/mediaqueries/_mobile.scss */
   #main #slide1 {
     padding-top: 28%;
   }
-  /* line 14, ../scss/mediaqueries/_mobile.scss */
+  /* line 22, ../scss/mediaqueries/_mobile.scss */
+  #main #slide4 .slide-content {
+    display: block;
+  }
+  /* line 29, ../scss/mediaqueries/_mobile.scss */
   #main #slide8 li {
     width: 100%;
     padding-left: 0;
     margin-bottom: 1em;
   }
-  /* line 20, ../scss/mediaqueries/_mobile.scss */
+  /* line 35, ../scss/mediaqueries/_mobile.scss */
   #main #slide8 p {
     font-size: 0.889em;
   }
-  /* line 24, ../scss/mediaqueries/_mobile.scss */
+  /* line 39, ../scss/mediaqueries/_mobile.scss */
   #main #slide8 .location-details {
     font-size: 0.8em;
   }
-  /* line 29, ../scss/mediaqueries/_mobile.scss */
-  #main .slide-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    height: auto;
-    padding: 5%;
+  /* line 44, ../scss/mediaqueries/_mobile.scss */
+  #main .wrap-subcontent, #main .pullout-box, #main .pullout-box {
+    display: block;
+    width: 100%;
   }
-  /* line 37, ../scss/mediaqueries/_mobile.scss */
+  /* line 49, ../scss/mediaqueries/_mobile.scss */
   #main .hed {
     font-size: 2em;
   }
-  /* line 41, ../scss/mediaqueries/_mobile.scss */
+  /* line 53, ../scss/mediaqueries/_mobile.scss */
   #main .dek {
     font-size: 1em;
     line-height: 1.4;
     margin-bottom: 24px;
   }
-  /* line 47, ../scss/mediaqueries/_mobile.scss */
+  /* line 59, ../scss/mediaqueries/_mobile.scss */
   #main h2 {
     font-size: 1.333em;
   }
-  /* line 51, ../scss/mediaqueries/_mobile.scss */
+  /* line 63, ../scss/mediaqueries/_mobile.scss */
   #main p {
     font-size: 1em;
   }
-  /* line 55, ../scss/mediaqueries/_mobile.scss */
-  #main .byline, #main .dateline, #main .pullout-box, #main #slide8 h2 {
+
+  /* line 70, ../scss/mediaqueries/_mobile.scss */
+  #slide8 .slide-content {
+    background-color: transparent;
+    color: #3c3c3c;
+  }
+
+  /* line 76, ../scss/mediaqueries/_mobile.scss */
+  .byline, .dateline, .pullout-box, #slide8 h2 {
     font-size: 0.889em;
     line-height: 1.4;
   }
-  /* line 60, ../scss/mediaqueries/_mobile.scss */
-  #main .byline, #main .dateline {
+
+  /* line 81, ../scss/mediaqueries/_mobile.scss */
+  .byline, .dateline {
     display: block;
   }
-  /* line 64, ../scss/mediaqueries/_mobile.scss */
-  #main .byline {
+
+  /* line 85, ../scss/mediaqueries/_mobile.scss */
+  .byline {
     padding-right: 0;
   }
-  /* line 67, ../scss/mediaqueries/_mobile.scss */
-  #main .dateline {
+
+  /* line 88, ../scss/mediaqueries/_mobile.scss */
+  .dateline {
     border-left: none;
     padding-left: 0;
+  }
+
+  /* line 93, ../scss/mediaqueries/_mobile.scss */
+  .slide-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: auto;
+    padding: 5%;
   }
 }
 /* TABLET */
@@ -596,8 +641,8 @@ picture {
   }
 
   /* line 16, ../scss/mediaqueries/_tablet.scss */
-  .lede-content {
-    width: 80%;
+  .lede-content, #main {
+    width: 100%;
   }
 
   /* line 20, ../scss/mediaqueries/_tablet.scss */
