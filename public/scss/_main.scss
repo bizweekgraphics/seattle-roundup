@@ -9,7 +9,6 @@ Primary style
 }
 
 body {
-	@include font-smoothing;
 
 	&::before {
 		/* never visible - this is used in jQuery to check the current MQ */ 
@@ -293,7 +292,7 @@ body[data-hijacking="on"] {
 // , #main 
 .lede-content {
 	margin: auto;
-  // height: 100vh;
+  height: 100vh;
   // @include center(y);
 }
 
@@ -302,11 +301,11 @@ html, body {
 }
 
 #main {
-	// position: fixed;
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
-	position: absolute;
+	// position: absolute;
 	z-index: -1;
 }
 
@@ -416,8 +415,8 @@ html, body {
 		&::after {
 			@extend %illustration;
 			background-image: url("../img/octopus.png");
-			right: 9.25em;
-			bottom: -0.02em;
+			// right: 9.25em;
+			bottom: -0.3em;
 		}
 	}
 
@@ -461,7 +460,7 @@ html, body {
 			@extend %illustration;
 			background-image: url("../img/crab.png");
 		  bottom: -1.3em;
-		  right: 11.2em;
+		  // right: 11.2em;
 		}
 	}
 }
@@ -500,6 +499,7 @@ html, body {
 
 	ul {
 		// margin-left: 10%;
+		background-color: rgba( $base-background-color, 0.75);
 	}
 
 	li {
