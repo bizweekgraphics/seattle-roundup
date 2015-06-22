@@ -199,9 +199,10 @@ body {
   font-family: "TiemposTextWeb-Regular", "Georgia", "Cambria", "Times New Roman", "Times", serif, serif;
   font-size: 1.125em;
   line-height: 1.625;
+  position: relative;
 }
 
-/* line 10, ../scss/base/_typography.scss */
+/* line 11, ../scss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -214,33 +215,33 @@ h6 {
   font-weight: normal;
 }
 
-/* line 23, ../scss/base/_typography.scss */
+/* line 24, ../scss/base/_typography.scss */
 h1 {
   font-size: 4rem;
   line-height: 1.1em;
 }
 
-/* line 33, ../scss/base/_typography.scss */
+/* line 34, ../scss/base/_typography.scss */
 p {
   margin: 0 0 1.625em;
 }
 
-/* line 37, ../scss/base/_typography.scss */
+/* line 38, ../scss/base/_typography.scss */
 a {
   color: #2B00F7;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.1s linear;
 }
-/* line 42, ../scss/base/_typography.scss */
+/* line 44, ../scss/base/_typography.scss */
 a:active, a:focus, a:hover {
   color: #1e00ab;
 }
-/* line 48, ../scss/base/_typography.scss */
+/* line 50, ../scss/base/_typography.scss */
 a:active, a:focus {
   outline: none;
 }
 
-/* line 54, ../scss/base/_typography.scss */
+/* line 56, ../scss/base/_typography.scss */
 hr {
   border-bottom: 1px solid #ddd;
   border-left: none;
@@ -249,7 +250,7 @@ hr {
   margin: 1.625em 0;
 }
 
-/* line 62, ../scss/base/_typography.scss */
+/* line 64, ../scss/base/_typography.scss */
 img,
 picture {
   margin: 0 auto;
@@ -257,71 +258,317 @@ picture {
   display: block;
 }
 
-/* page style */
-/* line 3, ../scss/_main.scss */
+/* placeholders */
+/* line 34, ../scss/partials/_mixins.scss */
 #slide3 h2::after, #slide4 h2::after, #slide5 h2::after {
   content: "";
   position: absolute;
-  top: -0.1em;
+  bottom: 0;
   right: 1em;
-  width: 8rem;
-  height: 8rem;
+  width: 7.325rem;
+  height: 7.325rem;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
-/* line 30, ../scss/_main.scss */
-.lede-content, #main {
-  width: 70%;
-  margin: 0 auto;
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* line 7, ../scss/_main.scss */
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-/* line 39, ../scss/_main.scss */
-#main {
+/* line 11, ../scss/_main.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 14, ../scss/_main.scss */
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  /* line 22, ../scss/_main.scss */
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  /* line 35, ../scss/_main.scss */
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+/* line 42, ../scss/_main.scss */
+.cd-section {
+  height: 100vh;
+}
+/* line 51, ../scss/_main.scss */
+.cd-section:first-of-type > div {
+  background-color: #fff;
+}
+/* line 54, ../scss/_main.scss */
+.cd-section:first-of-type > div::before {
+  /* alert -> all scrolling effects are not visible on small devices */
+  content: 'Effects not visible on mobile!';
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+}
+/* line 69, ../scss/_main.scss */
+.cd-section:nth-of-type(2) > div {
+  background-color: #f2f2f2;
+}
+/* line 73, ../scss/_main.scss */
+.cd-section:nth-of-type(3) > div {
+  background-color: #e5e5e5;
+}
+/* line 81, ../scss/_main.scss */
+.cd-section:nth-of-type(5) > div {
+  background-color: #f2f2f2;
+}
+/* line 85, ../scss/_main.scss */
+.cd-section:nth-of-type(6) > div {
+  background-color: #e5e5e5;
+}
+/* line 89, ../scss/_main.scss */
+.cd-section:nth-of-type(7) > div {
+  background-color: #f2f2f2;
+}
+/* line 93, ../scss/_main.scss */
+.cd-section:nth-of-type(8) > div {
+  background-color: #fff;
+}
+/* line 97, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 111, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
+  background-image: url("../img/octopus.jpg");
+  background-position: center left;
+  background-size: contain;
+}
+/* line 120, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
+  background-image: url("../img/clam.jpg");
+}
+/* line 127, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+  background-image: url("../img/pizza.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+/* line 136, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
+  background-image: url("../img/cocktail.jpg");
+}
+/* line 143, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(6) > div, [data-animation="fixed"] .cd-section:nth-of-type(6) > div, [data-animation="opacity"] .cd-section:nth-of-type(6) > div {
+  background-image: url("../img/canele.jpg");
+}
+/* line 150, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(7) > div, [data-animation="fixed"] .cd-section:nth-of-type(7) > div, [data-animation="opacity"] .cd-section:nth-of-type(7) > div {
+  background-image: url("../img/tuna_chips.jpg");
+}
+/* line 157, ../scss/_main.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(8) > div, [data-animation="fixed"] .cd-section:nth-of-type(8) > div, [data-animation="opacity"] .cd-section:nth-of-type(8) > div {
+  background: url("../img/footer.jpg") no-repeat center bottom #fff;
+  background-size: contain;
+}
+@media only screen and (min-width: 1050px) {
+  /* line 172, ../scss/_main.scss */
+  [data-hijacking="on"] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* line 180, ../scss/_main.scss */
+  [data-hijacking="on"] .cd-section > div {
+    visibility: visible;
+  }
+  /* line 185, ../scss/_main.scss */
+  [data-hijacking="off"] .cd-section > div {
+    opacity: 0;
+  }
+  /* line 189, ../scss/_main.scss */
+  [data-animation="rotate"] .cd-section {
+    /* enable a 3D-space for children elements */
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  /* line 194, ../scss/_main.scss */
+  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  /* line 198, ../scss/_main.scss */
+  [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+    box-shadow: 0 0 0 rgba(230, 230, 230, 0.4);
+  }
+  /* line 205, ../scss/_main.scss */
+  [data-animation="opacity"] .cd-section.visible > div {
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  /* line 212, ../scss/_main.scss */
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  /* line 217, ../scss/_main.scss */
+  .cd-section > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* line 229, ../scss/_main.scss */
+  [data-hijacking="on"] .cd-section > div {
+    position: absolute;
+    height: 100vh;
+    display: block;
+    padding: 20% 5% 0 54%;
+  }
+  /* line 236, ../scss/_main.scss */
+  [data-animation="rotate"] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+/* line 242, ../scss/_main.scss */
+.cd-vertical-nav {
+  /* lateral navigation */
   position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+/* line 250, ../scss/_main.scss */
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+}
+/* line 262, ../scss/_main.scss */
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+/* line 267, ../scss/_main.scss */
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+@media only screen and (min-width: 1050px) {
+  /* line 242, ../scss/_main.scss */
+  .cd-vertical-nav {
+    display: block;
+  }
+}
+
+/* line 290, ../scss/_main.scss */
+.lede-wrap {
+  height: 78vh;
+}
+
+/* line 294, ../scss/_main.scss */
+.lede-content {
+  margin: auto;
+}
+
+/* line 304, ../scss/_main.scss */
+#main {
   width: 100vw;
   height: 100vh;
   top: 0;
+  position: absolute;
   z-index: -1;
 }
 
-/* line 47, ../scss/_main.scss */
-.slide {
-  width: 100vw;
-  display: block;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 10% 10% 10% 55%;
-  margin: 0 auto;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  opacity: 0;
-}
-/* line 75, ../scss/_main.scss */
-.slide h2 {
+/* line 341, ../scss/_main.scss */
+.cd-section h2 {
   position: relative;
 }
-/* line 79, ../scss/_main.scss */
-.slide p {
+/* line 345, ../scss/_main.scss */
+.cd-section p {
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
-/* line 84, ../scss/_main.scss */
-.slide .location-details {
+/* line 350, ../scss/_main.scss */
+.cd-section .location-details {
   font-size: 1em;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
 }
 /* line 20, ../scss/bourbon/addons/_clearfix.scss */
-.slide ul::after {
+.cd-section ul::after {
   clear: both;
   content: "";
   display: table;
 }
-/* line 93, ../scss/_main.scss */
-.slide .outline-text {
+/* line 359, ../scss/_main.scss */
+.cd-section .outline-text {
   color: transparent;
   background-color: #3c3c3c;
   -webkit-text-fill-color: #fff;
@@ -340,132 +587,107 @@ picture {
   letter-spacing: 0.12em;
 }
 
-/* line 108, ../scss/_main.scss */
-#slide1 {
-  background: #fefefe;
-  padding: 12% 5% 5%;
+/* line 376, ../scss/_main.scss */
+#slide1 > div {
+  padding: 12% 5% 0;
 }
-/* line 112, ../scss/_main.scss */
+/* line 383, ../scss/_main.scss */
 #slide1 header {
   text-align: center;
 }
 
-/* line 116, ../scss/_main.scss */
-#slide2 {
-  background-image: url("../img/octopus.jpg");
-  background-color: #d2d2cb;
-  background-position: center left;
-}
-
-/* line 121, ../scss/_main.scss */
-#slide3 {
-  background-color: #f9f9ee;
-  background-image: url("../img/clam.jpg");
-  background-position: center left;
-}
-/* line 128, ../scss/_main.scss */
+/* line 399, ../scss/_main.scss */
 #slide3 h2::after {
   background-image: url("../img/seal.png");
 }
 
-/* line 134, ../scss/_main.scss */
-#slide4 {
-  background-image: url("../img/pizza.jpg");
-  background-position: center center;
-  background-size: cover;
-  padding: 5%;
+/* line 409, ../scss/_main.scss */
+#slide4 > div {
+  padding: 12% 5% 5%;
 }
-/* line 142, ../scss/_main.scss */
+/* line 416, ../scss/_main.scss */
 #slide4 h2::after {
   background-image: url("../img/octopus.png");
+  right: 9.25em;
+  bottom: -0.02em;
 }
-/* line 148, ../scss/_main.scss */
+/* line 424, ../scss/_main.scss */
 #slide4 h3 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 5% 0% 5% 7%;
   border: 4px solid #fff;
 }
-/* line 158, ../scss/_main.scss */
+/* line 434, ../scss/_main.scss */
+#slide4 .outline-text {
+  color: #fff;
+  background-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -webkit-text-stroke: 0.09em #fff;
+  -moz-text-stroke: 0.09em #fff;
+  -ms-text-stroke: 0.09em #fff;
+  -o-text-stroke: 0.09em #fff;
+}
+/* line 442, ../scss/_main.scss */
 #slide4 .slide-content {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5%;
   color: #fff;
   box-sizing: border-box;
-  height: 100%;
+  height: 78vh;
   display: table;
 }
 
-/* line 168, ../scss/_main.scss */
-#slide5 {
-  background-color: #e1e1dd;
-  background-image: url("../img/cocktail.jpg");
-  background-position: center left;
-}
-/* line 175, ../scss/_main.scss */
+/* line 459, ../scss/_main.scss */
 #slide5 h2::after {
   background-image: url("../img/crab.png");
+  bottom: -1.3em;
+  right: 11.2em;
 }
 
-/* line 182, ../scss/_main.scss */
-#slide6 {
-  background-color: #d2d2cb;
-  background-image: url("../img/canele.jpg");
-  background-position: center left;
+/* line 484, ../scss/_main.scss */
+#slide8 > div {
+  padding: 11% 5% 10%;
 }
-
-/* line 187, ../scss/_main.scss */
-#slide7 {
-  background-color: #f9f9ee;
-  background-image: url("../img/tuna_chips.jpg");
-  background-position: center left;
-}
-
-/* line 193, ../scss/_main.scss */
-#slide8 {
-  background-color: #fff;
-  background: url("../img/footer.jpg") no-repeat center bottom;
-  background-size: contain;
-}
-/* line 198, ../scss/_main.scss */
-#main #slide8 {
-  padding: 5% 5% 10%;
-}
-/* line 202, ../scss/_main.scss */
+/* line 488, ../scss/_main.scss */
 #slide8 h2 {
   font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding: 2% 3%;
   border: 2px solid #3c3c3c;
   margin-bottom: 2em;
+  width: 75%;
 }
-/* line 209, ../scss/_main.scss */
+/* line 496, ../scss/_main.scss */
 #slide8 p {
   font-size: 0.9em;
 }
-/* line 214, ../scss/_main.scss */
+/* line 505, ../scss/_main.scss */
 #slide8 li {
   float: left;
-  width: 17%;
+  width: calc(97% / 5);
   padding-left: 3%;
 }
-/* line 219, ../scss/_main.scss */
+/* line 510, ../scss/_main.scss */
 #slide8 li:first-child {
   padding-left: 0;
 }
 
-/* line 226, ../scss/_main.scss */
+/* line 521, ../scss/_main.scss */
 .pullout-box {
   font-size: 1.25em;
   width: 40%;
   padding-right: 2em;
 }
 
-/* line 236, ../scss/_main.scss */
+/* line 531, ../scss/_main.scss */
 .wrap-subcontent, .pullout-box {
   display: table-cell;
   vertical-align: bottom;
 }
 
-/* line 241, ../scss/_main.scss */
+/* line 536, ../scss/_main.scss */
 .scroller {
   position: absolute;
   width: 100%;
@@ -473,49 +695,51 @@ picture {
   left: 0px;
 }
 
-/* line 249, ../scss/_main.scss */
+/* line 544, ../scss/_main.scss */
 .lede-content {
   position: relative;
 }
 
-/* line 253, ../scss/_main.scss */
+/* line 548, ../scss/_main.scss */
 .lede-image {
   overflow: hidden;
   height: 400px;
 }
 
-/* line 258, ../scss/_main.scss */
+/* line 553, ../scss/_main.scss */
 .hed {
   color: #3c3c3c;
+  width: 90%;
+  display: inline-block;
 }
 
-/* line 262, ../scss/_main.scss */
+/* line 559, ../scss/_main.scss */
 .dek {
   color: #3c3c3c;
   font-size: 2em;
 }
 
-/* line 267, ../scss/_main.scss */
+/* line 564, ../scss/_main.scss */
 .subhed {
   margin-top: 0.5em;
   margin-bottom: 0.75em;
 }
 
-/* line 272, ../scss/_main.scss */
+/* line 569, ../scss/_main.scss */
 .byline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   margin-bottom: 0em;
   padding-right: 0.5em;
 }
 
-/* line 278, ../scss/_main.scss */
+/* line 575, ../scss/_main.scss */
 .dateline {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   padding-left: 0.5em;
   border-left: 1px solid #3c3c3c;
 }
 
-/* line 285, ../scss/_main.scss */
+/* line 582, ../scss/_main.scss */
 .short-line {
   width: 70px;
   border-bottom: 2px solid #3c3c3c;
@@ -525,7 +749,7 @@ picture {
 
 /*-- MEDIA QUERIES -- */
 /* MOBILE */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 835px) {
   /* line 3, ../scss/mediaqueries/_mobile.scss */
   .lede-content, #main {
     width: 100%;

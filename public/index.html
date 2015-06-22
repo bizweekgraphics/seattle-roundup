@@ -64,7 +64,7 @@
 
             <style type="text/css"></style>
         </head>
-    <body>
+    <body data-hijacking="on" data-animation="parallax">
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -132,7 +132,8 @@
 
         <div id="main">
 
-            <section id="slide1" class="slide">
+            <section id="slide1" class="cd-section visible">
+                <div>
                 <header class="lede-wrap">
                     <div class="lede-content">
                         <h1 class="hed">The Seven Places to Eat in Seattle Right Now</h1>
@@ -146,19 +147,22 @@
                         </div>
                     </div>
                 </header>
+                </div>
             </section>
 
         <!-- INTRO -->
-            <section id="slide2" class="slide">
-                <div class="slide-content reveal fadeInUp animated">
+            <section id="slide2" class="cd-section">
+                <div>
+                <div class="slide-content">
                     <h2>1. POMEROL</h2>
                     <p>The spicy, wood-fire-grilled octopus served on a luxurious smear of aioli is tender, a little smoky, and full of flavor. It’s just one reason to check out this casual French- Vietnamese gem in Seattle’s Fremont neighborhood.</p>
                     <p class="location-details">127 N. 36th St., 206 632-0135; <a href="http://pomerolrestaurant.com">pomerolrestaurant.com</a></p>
-                </div>  
+                </div>
+                </div>
             </section>
 
-            <section id="slide3" class="slide">
-                <div class="slide-content reveal fadeInUp animated">
+            <section id="slide3" class="cd-section">
+                <div class="slide-content">
                     <!-- <img class="seal" src="img/seal.png" /> -->
 
                     <h2>2. WALRUS AND THE CARPENTER</h2>
@@ -167,8 +171,8 @@
                 </div>
             </section>
 
-            <section id="slide4" class="slide">
-
+            <section id="slide4" class="cd-section">
+                <div>
                 <div class="slide-content reveal fadeInUp animated">
                     <div class="pullout-box">
                         <h3><strong>DON’T FEAR THE LINE</strong>. HEAD TO PIZZERIA GABBIANO’S SISTER RESTAURANT, <span class="outline-text">IL CORVO</span>, FOR FRESH, SIMPLE LUNCHTIME PASTA. THE LINE, LIKE THE COOKS, MOVES QUICKLY.</h3>
@@ -181,9 +185,10 @@
                         <p class="location-details">300 Occidental Ave. S, 206 624-1374; <a href="http://thelondonplaneseattle.com.com">thelondonplaneseattle.com</a></p>
                     </div>
                 </div>
+                </div>
             </section>
 
-            <section id="slide5" class="slide">
+            <section id="slide5" class="cd-section">
                 <div class="slide-content">
                     <!-- <img class="crab" src="img/crab.png" /> -->
                     <h2>5. CANON</h2>
@@ -192,7 +197,7 @@
                 </div>
             </section>
 
-            <section id="slide6" class="slide">
+            <section id="slide6" class="cd-section">
                 <div class="slide-content">
                     <h2>6. TAYLOR SHELLFISH FARMS OYSTER BAR</h2>
                     <p>Taylor Shellfish Farms provides restaurants all over the city with oysters, and it runs a few eateries of its own. Go for a beer with a side of smoked oyster dip and a taste of the West Coast’s great treasure—giant geoduck clam, sliced and served raw.</p>
@@ -200,7 +205,7 @@
                 </div>
             </section>
 
-            <section id="slide7" class="slide">
+            <section id="slide7" class="cd-section">
                 <div class="slide-content">
                     <h2>7. MAMNOON</h2>
                     <p>This restaurant turns out hot, puffy breads at all hours, offering a taste of Lebanon and Syria by way of Puget Sound. You’ll find excellent strong coffee, flatbreads filled with lamb and fresh spices, and a glorious take on kuku (left), a traditional omelet that’s almost more herb than egg.</p>
@@ -208,7 +213,7 @@
                 </div>
             </section>
 
-            <section id="slide8" class="slide">
+            <section id="slide8" class="cd-section">
                 <div class="slide-content">
                     <h2><strong>UP LATE?</strong> HEAD TO THESE JOINTS IF YOU’RE HUNGRY OR THIRSTY AFTER MIDNIGHT—ALL ARE <span class="outline-text">OPEN</span> UNTIL 2 A.M.</h2>
                     <ul>
@@ -248,8 +253,13 @@
         <script src="http://www.bloomberg.com/graphics/assets/js/vendor/jquery.min.js?"></script>
         <script src="http://www.bloomberg.com/graphics/assets/js/vendor/topojson-v1.6.8.min.js?"></script>
         <script src="http://www.bloomberg.com/graphics/assets/js/vendor/queue.v1.min.js?"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/seattle.js"></script>
+        <!-- <script src="js/wow.min.js"></script>
+        <script src="js/seattle.js"></script> -->
+
+        <script src="js/jquery-2.1.4.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/velocity.ui.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
 
         <!-- Required Scripts-->
         <script src="http://www.bloomberg.com/graphics/assets/js/vendor/lodash.underscore.min.js?"></script>
@@ -300,22 +310,22 @@
         </script>
 
         <script>
-            wow = new WOW(
-                {
-                    boxClass:   'reveal',
-                    animateClass: 'animated',
-                    offset:     100,
-                    callback:   function(box) {
-                        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-                    }
-                }
-            );
-            wow.init();
-            document.getElementById('moar').onclick = function() {
-                var section = document.createElement('section');
-                section.className = 'section--purple wow fadeInDown';
-                this.parentNode.insertBefore(section, this);
-            };
+            // wow = new WOW(
+            //     {
+            //         boxClass:   'reveal',
+            //         animateClass: 'animated',
+            //         offset:     100,
+            //         callback:   function(box) {
+            //             console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            //         }
+            //     }
+            // );
+            // wow.init();
+            // document.getElementById('moar').onclick = function() {
+            //     var section = document.createElement('section');
+            //     section.className = 'section--purple wow fadeInDown';
+            //     this.parentNode.insertBefore(section, this);
+            // };
 
             function show_footnote1() {
                 document.getElementById('footnote-1').style.visibility="visible";
